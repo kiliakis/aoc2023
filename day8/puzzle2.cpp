@@ -55,7 +55,6 @@ public:
         int ans = 0;
         bool all_end=false;
         while (all_end == false){
-            ans++;
             all_end=true;
             for(size_t i=0; i < locs.size(); i++){
                 if (directions[ans % directions.size()] == 'L'){
@@ -65,6 +64,7 @@ public:
                 }
                 all_end &= (locs[i].back() == 'Z'); 
             }
+            ans++;
         }
 
         return ans;
@@ -79,8 +79,8 @@ int main() {
     cout << "Test 1\n";
     cout << s.numSteps("small_input_3.txt") << endl;
 
-    // cout << "Test 3\n";
-    // cout << s.numSteps("input.txt") << endl;
+    cout << "Test 3\n";
+    cout << s.numSteps("input.txt") << endl;
     return 0;
 }
 
