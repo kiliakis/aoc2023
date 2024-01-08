@@ -56,6 +56,7 @@ public:
         bool all_end=false;
         while (all_end == false){
             all_end=true;
+            // cout << "loc 0: " << locs[0] << endl;
             for(size_t i=0; i < locs.size(); i++){
                 if (directions[ans % directions.size()] == 'L'){
                     locs[i] = map[locs[i]][0];
@@ -78,6 +79,10 @@ int main() {
 
     cout << "Test 1\n";
     cout << s.numSteps("small_input_3.txt") << endl;
+
+    cout << "Test 2\n";
+    cout << s.numSteps("small_input_2.txt") << endl;
+
 
     cout << "Test 3\n";
     cout << s.numSteps("input.txt") << endl;
